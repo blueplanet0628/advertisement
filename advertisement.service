@@ -1,0 +1,18 @@
+[Unit]
+Description=Advertisement Player Service
+After=graphical.target
+Requires=graphical.target
+
+[Service]
+Type=simple
+User=pi
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/pi/.Xauthority
+ExecStart=/home/pi/advertisement/start_advertisement.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=graphical.target
+
+

@@ -1,0 +1,35 @@
+# HD Video Advertisement Player - H.264 Optimized
+# Python 3.8+ recommended
+#
+# PERFORMANCE OPTIMIZATIONS:
+# -------------------------
+# This player is optimized for H.264 video playback with:
+# - Hardware acceleration (VAAPI/VDPAU on Linux, DXVA2 on Windows)
+# - Multi-threaded decoding for reduced CPU load
+# - High-definition quality scaling
+# - Minimal memory footprint with efficient frame processing
+#
+# SYSTEM REQUIREMENTS:
+# -------------------
+# For best performance, ensure your system has:
+# 1. FFmpeg with H.264 hardware acceleration support
+# 2. GPU drivers with video decode acceleration
+# 3. At least 2GB RAM for HD content
+#
+
+# GUI Framework - Qt5 for professional GUI with hardware acceleration
+PyQt5>=5.15.9
+
+# Computer Vision - Headless OpenCV to avoid Qt plugin conflicts with PyQt5
+# Note: Use opencv-python-headless to prevent Qt conflicts when using PyQt5
+opencv-python-headless>=4.8.0
+
+# Image Processing - High-quality image manipulation
+Pillow>=10.0.0
+
+# Numerical Computing - Array operations for video frames
+numpy>=1.24.0
+
+# Audio-Video Synchronization - FFmpeg-based media player with audio support
+# IMPORTANT: Provides H.264 hardware decoding and multi-threaded processing
+ffpyplayer>=4.5.0
